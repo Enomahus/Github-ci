@@ -1,6 +1,7 @@
 name: DevOps-GithubActions
 permissions:
-  issues: write
+  contents: read
+  pages: write
 
 on: push
 
