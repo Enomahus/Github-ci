@@ -1,5 +1,5 @@
 name: DevOps-GithubActions
-run-name: ${{ github.actor }} pipeline demo avec Github Actions
+run-name: ${{ github.actor }} pipeline demo avec Github Actions @
 permissions:
   contents: read
   pages: write
