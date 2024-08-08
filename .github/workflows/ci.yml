@@ -1,6 +1,4 @@
 name: DevOps-GithubActions
-permissions:
-  issues: write
 
 on: push
 jobs:
