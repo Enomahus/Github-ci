@@ -2,7 +2,7 @@ name: DevOps-GithubActions
 
 on: push
   permissions:
-    contents: write
+    issues: write
 jobs:
   #Build job
   build:
