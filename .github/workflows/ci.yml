@@ -1,8 +1,9 @@
 name: DevOps-GithubActions
+permissions:
+  issues: write
 
 on: push
-  permissions:
-    issues: write
+
 jobs:
   #Build job
   build:
