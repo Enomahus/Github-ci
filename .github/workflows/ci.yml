@@ -1,0 +1,17 @@
+name: DevOps-GithubActions
+on: push
+jobs:
+  #Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ckeckout code
+        uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build
