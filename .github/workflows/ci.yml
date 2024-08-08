@@ -1,13 +1,13 @@
 name: DevOps-GithubActions
-run-name: ${{ github.actor }} pipeline demo avec Github Actions
+run-name: ${{ github.actor }} pipeline demo avec Github Actions @
 permissions:
   contents: read
   pages: write
 
 on:
-  [pull_request]
+  #[push, pull_request]
   #[push]
-  #workflow_dispatch:
+  workflow_dispatch:
 
   #schedule:
   #  - cron: "*/5 * * * *"
@@ -17,6 +17,7 @@ jobs:
   build:
     env:
       NODE_VERSION: 20
+      COMMIT_MSG: "Build terminé avec succès!"
 
     runs-on: ubuntu-latest
     steps:
@@ -35,6 +36,7 @@ jobs:
         with:
           name: production-files
           path: ./dist
+          commit_message: $COMMIT_MSG
 
   #Deploy job
   deploy:
