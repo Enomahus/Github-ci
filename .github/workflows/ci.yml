@@ -49,7 +49,7 @@ jobs:
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4 #peaceiris/actions-gh-pages@v4
         with:
-          folder: production-files
+          folder: ./dist
           branch: gh-pages
           #github_token: ${{ secrets.GITHUB_TOKEN }}
           #publish_dir: ./dist
